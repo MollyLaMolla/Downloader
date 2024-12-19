@@ -1,0 +1,193 @@
+
+body{
+    display: flex; 
+    height: 100vh;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #800080, #3532ec, #800080);
+}
+
+.div1{
+    height: 150px;
+    width: 150px;
+    border: 20px solid red;
+    border-color: red orangered;
+    border-radius: 50%;
+    rotate: 0deg;
+    z-index: -1;
+}
+
+.div2{
+    height: 150px;
+    width: 150px;
+    border: 40px solid red;
+    border-color: red orangered;
+    border-radius: 50%;
+    rotate: 90deg;
+    z-index: -2;
+}
+
+.div3{
+    height: 150px;
+    width: 150px;
+    border: 60px solid red;
+    border-color: red orangered;
+    border-radius: 50%;
+    rotate: 0deg;
+    z-index: -3;
+}
+
+.div4{
+    height: 150px;
+    width: 150px;
+    border: 80px solid red;
+    border-color: red orangered;
+    border-radius: 50%;
+    rotate: 90deg;
+    z-index: -4;
+}
+
+.div5{
+    height: 150px;
+    width: 150px;
+    border: 100px solid red;
+    border-color: red orangered;
+    border-radius: 50%;
+    rotate: 0deg;
+    z-index: -5;
+}
+
+.div6{
+    height: 150px;
+    width: 150px;
+    border: 120px solid red;
+    border-color: red orangered;
+    border-radius: 50%;
+    rotate: 90deg;
+    z-index: -6;
+}
+
+.div-shadow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    height: 200px;
+    width: 200px;
+    border: 66px solid red;
+    border-color: red orangered;
+    border-radius: 50%;
+    rotate: 0deg;
+    z-index: -10;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow{
+    0%{
+        box-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 60px #fff, 0 0 80px #fff;
+    }
+
+    100%{
+        box-shadow: 0 0 40px #444, 0 0 80px #444, 0 0 120px #444, 0 0 160px #444;
+    }
+}
+
+.right{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border-color: rgba(0, 0, 0, 0.1) rgba(255, 255, 255, 0.1);
+}
+
+.left{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border-color: rgb(255, 0, 85) rgb(183, 0, 255);
+}
+
+.charging-bar-border{
+    position: absolute;
+    background-color: #d549ff56;
+    bottom: 20px;
+    height: 100px;
+    width: calc(100% - 54px);
+    border: 0px solid rgb(183, 0, 255);
+    box-shadow: 0 0 1px 1px #d549ff, 0 0 2px 2px #d549ff, 0 0 3px 3px #d549ff, 0 0 4px 4px #d549ff, 0 0 8px 4px #d549ff, 0 0 16px 4px #d549ff;
+    border-radius:1cap;
+    z-index: 10;
+}
+
+.charging-bar{
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    background-color: rgb(255, 0, 85);
+    height: 100px;
+    width: 0%;
+    border-radius: 1ch 0 0 1ch;
+    background-image: url(./Pattern.jpg);
+    background-size: 500px;
+    background-repeat:repeat;
+    filter:brightness(1);
+    
+}
+
+.percent-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+
+}
+
+.percent{
+    color: whitesmoke;
+    font-size: 60px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    margin: 0;
+}
+
+.speed{
+    color: whitesmoke;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    margin: 0;
+}
+
+.charging-light{
+    position: absolute;
+    right: -4px;
+    height: 100%;
+    width: 0px;
+    box-shadow: 0 0 1px 1px #d549ff, 0 0 2px 2px #d549ff, 0 0 3px 3px #d549ff, 0 0 4px 4px #d549ff;
+}
+
+.downB{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: #d549ff56;
+    box-shadow: 0 0 1px 1px #d549ff, 0 0 2px 2px #d549ff, 0 0 3px 3px #d549ff, 0 0 4px 4px #d549ff, 0 0 8px 4px #d549ff, 0 0 16px 4px #d549ff;
+    border-radius: 2ch;
+    width: 440px;
+    height: 150px;
+    top: 30px;
+    color: whitesmoke;
+    transition: 100ms;
+}
+
+.downB:hover{
+    box-shadow: 0 0 2px 1px #d549ff, 0 0 4px 2px #d549ff, 0 0 6px 3px #d549ff, 0 0 8px 4px #d549ff, 0 0 16px 4px #d549ff, 0 0 32px 4px #d549ff;
+}
+
+.downB h1{
+    font-size: 3.5rem;
+}
